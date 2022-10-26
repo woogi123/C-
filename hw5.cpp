@@ -1,6 +1,16 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
+
+int int_2(int n, int count) {
+    count -= 1;
+    if (n == 0 || count == 0) {
+        printf("%d", n % 2);
+        return 0;
+    }
+    int_2(n = n / 2, count);
+
+}
 int main(void) {
     int n, count = 0, i, k;
     printf("Please enter a number: ");
@@ -17,13 +27,4 @@ int main(void) {
     }
 
     return 0;
-}
-int int_2(n, count) {
-    count -= 1;
-    if (n == 0 || count == 0) {
-        printf("%d", n % 2);
-        return 0;
-    }
-    int_2(n = n / 2, count);
-
 }
